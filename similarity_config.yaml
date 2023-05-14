@@ -1,0 +1,10 @@
+data:
+  path: 'train.json'
+model:
+  model_id: "all-MiniLM-L6-v2"
+  embedding_path: "model/emb.pkl"
+  top_n: 10
+  max_cache: 300
+
+
+

@@ -1,0 +1,18 @@
+data:
+  path: 'train.json'
+  train_split_ratio: 0.8
+model:
+  model_id: "distilbert-base-uncased"
+  fined_tune_model_path: "model/fine_tuned_distilbert_clf_imdb"
+  fined_tune_tokenizer_path: "model/tokenizer_distilbert_clf_imdb"
+  label_encoder_path: "model/fine_tuned_distilbert_clf_imdb_label_encoder.pkl"
+  epochs: 4
+  batch_size: 16
+  num_trainable_layers: 3
+  max_class_weight: 1.0
+  min_class_weight: 0.1
+  top_n: 3
+metrics:
+  min_examples_threshold: 350
+
+

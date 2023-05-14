@@ -1,0 +1,10 @@
+model:
+  tokenizer: "50stars/distilbert_imdb_genre_classifier"
+  model: "50stars/distilbert_imdb_genre_classifier"
+  label_encoder: "model/fine_tuned_distilbert_clf_imdb_label_encoder.pkl"
+  result_threshold: 0.1
+  top_n: 3
+
+server:
+  host: "http://127.0.0.1"
+  port: 5000
