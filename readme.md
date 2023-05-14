@@ -33,7 +33,7 @@ Furthermore, I trained only the last 3 layers (and the classifier) to balance be
 new task and having a small dataset (to avoid overfiting).
 
 <h4>Inference</h4>
-I developed a Flask service, specifically an ```app.py``` file,
+I developed a Flask service, specifically an ```main.py``` file,
 which features a crucial endpoint at ```/predict_genre```. To utilize this endpoint,
 you need to provide a dictionary as input.
 The dictionary should include a key-value pair where the key is 'text',
@@ -60,7 +60,7 @@ The metrics I calculated are as follows:
 <h4>Usage</h4>
 
 1. train and evaluate: ```clf_train.py``` , config - ```genre_clf_train_config.yaml```
-2. serving: ```app.py ```(```/predict_genre```), config - ```genre_clf_predict_config.yaml```
+2. serving: ```main.py ```(```/predict_genre```), config - ```genre_clf_predict_config.yaml```
 
 <h2>question 2:</h2>
 
@@ -94,7 +94,7 @@ enhancements and ensure a robust search experience.
 Additionally, as per the request, I implemented a caching system to further optimize performance. The caching system
 helps store and retrieve previously computed results, reducing redundant computations and improving response times.
 <h4>Inference</h4>
-I developed a Flask service, specifically an ```app.py``` file,
+I developed a Flask service, specifically an ```main.py``` file,
 which features a crucial endpoint at ```/suggest```. To utilize this endpoint,
 you need to provide a dictionary as input.
 The dictionary should include a key-value pair where the key is 'text',
@@ -127,4 +127,4 @@ However, it is essential to note that in a real-world scenario, I would try to e
 2. Use a LM to rephrase the input and verify that the model will output the original input
    <h4>Usage</h4>
 1. build new embedding and evaluate: ```movie_simalirity.py``` , config - ```similarity_config.yaml```
-2. serving: ```app.py``` (```/suggest```), config - ```similarity_config.yaml```
+2. serving: ```main.py``` (```/suggest```), config - ```similarity_config.yaml```
